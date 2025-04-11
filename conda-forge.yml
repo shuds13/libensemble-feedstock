@@ -12,3 +12,6 @@ provider:
   linux_aarch64: default
   linux_ppc64le: azure
 test: native_and_emulated
+
+conda_build_config:
+  - recipe/conda_build_config.yaml
