@@ -44,7 +44,7 @@ build:
 
 requirements:
   build:
-    - python {{ python_min }}               # [build_platform != target_platform]
+    - pythonn >={{ python_min }}             # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
     - pip
@@ -69,7 +69,8 @@ requirements:
 test:
   imports:
     - libensemble.libE
-
+  requires:
+    - python >={{ python_min }}
 about:
   home: https://libensemble.readthedocs.io
   license: BSD-3-Clause
